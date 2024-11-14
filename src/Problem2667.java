@@ -1,6 +1,7 @@
 import java.io.File;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Deque;
 import java.util.List;
 import java.util.Scanner;
@@ -36,6 +37,7 @@ public class Problem2667 {
             }
         }
         System.out.println(townCnt);
+        Collections.sort(townSizes);
         for(Integer cnt : townSizes){
             System.out.println(cnt);
         }
@@ -61,11 +63,7 @@ public class Problem2667 {
             }
         }
 
-        if(townSize < 2){
-            townCnt -= 1;
-        }else{
-            townSizes.add(townSize);
-        }
+        townSizes.add(townSize);    
         
     }
 }
